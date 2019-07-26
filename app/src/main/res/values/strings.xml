@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Aplikasi Rumus Bangun Datar</string>
+    <string name="trapesium">trapesium</string>
+    <string name="jajargenjang">jajargenjang</string>
+    <string name="tinggi">tinggi</string>
+    <string name="hitung">hitung</string>
+    <string name="hasil">Hasil</string>
+    <string name="alas">alas</string>
+    <string name="atasT">Atas Trapesium</string>
+    <string name="bawahT">Bawah Trapesium</string>
+    <string name="tinggiT">Tinggi Trapesium</string>
+
+</resources>
