@@ -1,5 +1,7 @@
 package org.sandec.aplikasirumusbangundatar;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -19,6 +21,9 @@ public class JajarGenjang extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jajar_genjang);
 
+        Button btnhasil = findViewById(R.id.idhitung);
+        btnhasil.setOnClickListener(this);
+
         eAlas = findViewById(R.id.idalas);
         eTinggi = findViewById(R.id.idtinggi);
         bHitung = findViewById(R.id.idhitung);
@@ -32,6 +37,7 @@ public class JajarGenjang extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v){
+        Intent data = new Intent();
         if (v.getId() == R.id.idhitung);
         String inputAlas =eAlas.getText().toString().trim();
         String inputTinggi = eTinggi.getText().toString().trim();
@@ -60,6 +66,11 @@ public class JajarGenjang extends AppCompatActivity implements View.OnClickListe
             double volume = alas * tinggi;
             tHasil.setText(String.valueOf(volume));
         }
+
+        data.setData(Uri.parse(tHasil.getText().toString()));
+        setResult(RESULT_OK, data);
+
+        finish();
     }
 
 
